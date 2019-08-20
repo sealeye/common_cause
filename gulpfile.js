@@ -1,11 +1,11 @@
 'use strict';
 
 const {
-  src,
-  dest,
-  parallel,
-  series,
-  watch
+    src,
+    dest,
+    parallel,
+    series,
+    watch
 } = require('gulp');
 
 const plumber = require('gulp-plumber');
@@ -63,58 +63,58 @@ const browserSync = require('browser-sync').create();
 //}
 
 function cleanBuild() {
-  return del('build');
+    return del('build');
 }
 
 function copyBuild() {
-  return src([
+    return src([
       'source/img/**'
 //      '!source/img/exclude-*/**',
 //      'source/*.ico'
     ], {
-      base: 'source'
-    })
-    .pipe(dest('build'));
+            base: 'source'
+        })
+        .pipe(dest('build'));
 }
 
 function createBuildCss() {
-  return src('source/sass/style.scss')
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
+    return src('source/sass/style.scss')
+        .pipe(plumber())
+        .pipe(sourcemap.init())
+        .pipe(sass())
+        .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(sourcemap.write('.'))
-    .pipe(dest('build/css'))
-    .pipe(browserSync.stream());
+        .pipe(csso())
+        .pipe(rename('style.min.css'))
+        .pipe(sourcemap.write('.'))
+        .pipe(dest('build/css'))
+        .pipe(browserSync.stream());
 }
 
 function createSourceCss() {
-  return src('source/sass/style.scss')
-    .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'expanded',
-      sourceComments: true
-    }))
-    .pipe(rename('style.css'))
-    .pipe(dest('source/css'));
+    return src('source/sass/style.scss')
+        .pipe(plumber())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            sourceComments: true
+        }))
+        .pipe(rename('style.css'))
+        .pipe(dest('source/css'));
 }
 
 function createBuildJs() {
-  return src([
+    return src([
       'source/js/script.js',
     ])
-    .pipe(sourcemap.init())
-    .pipe(concat('script.min.js'))
-    .pipe(babel())
-    .pipe(uglify({
-      toplevel: true
-      }))
-    .pipe(sourcemap.write('.'))
-    .pipe(dest('build/js'));
+        .pipe(sourcemap.init())
+        .pipe(concat('script.min.js'))
+        .pipe(babel())
+        .pipe(uglify({
+            toplevel: true
+        }))
+        .pipe(sourcemap.write('.'))
+        .pipe(dest('build/js'));
 }
 
 //function createSprite() {
@@ -127,50 +127,53 @@ function createBuildJs() {
 //}
 
 function createBuildHtml() {
-  return src('source/*.html')
-    .pipe(posthtml([
+    return src('source/*.html')
+        .pipe(posthtml([
       include({
-        root: './build/'
-      })
+                root: './build/'
+            })
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest('build'));
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(dest('build'));
 }
 
 function refreshServer(done) {
-  browserSync.reload();
-  done();
+    browserSync.reload();
+    done();
 }
 
 function initServer() {
-  browserSync.init({
-    server: 'build/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+    browserSync.init({
+        server: 'build/',
+        notify: false,
+        open: true,
+        cors: true,
+        ui: false
+    });
 
-  watch('source/sass/**/*.{scss,sass}',
-    series(createBuildCss, createSourceCss));
-  watch('source/img/exclude-original/**',
-    series(exports.build, refreshServer));
-  watch('source/js/**/*.js',
-    series(exports.js, refreshServer));
-  watch('source/img/exclude-sprite/**/*.svg',
-    series(createSprite, createBuildHtml, refreshServer));
-  watch('source/*.html',
-    series(createBuildHtml, refreshServer));
+    watch('source/sass/**/*.{scss,sass}',
+        series(createBuildCss, createSourceCss));
+    watch('source/img/exclude-original/**',
+        series(exports.build, refreshServer));
+    watch('source/js/**/*.js',
+        series(exports.js, refreshServer));
+    //watch('source/img/exclude-sprite/**/*.svg',
+    //series(createSprite, createBuildHtml, refreshServer));
+    watch('source/*.html',
+        series(createBuildHtml, refreshServer));
 }
 
 //exports.images = series(cleanImages, optimizeImages, createWebp);
 exports.js = createBuildJs;
 exports.build = series(
-  //exports.images, 
- cleanBuild, copyBuild,
-  parallel(series(createBuildCss, createSourceCss), 
-           //createSprite, 
-           exports.js),
-  createBuildHtml
+    //exports.images, 
+    cleanBuild,
+    copyBuild,
+    parallel(series(createBuildCss, createSourceCss),
+    //createSprite, 
+    exports.js),
+    createBuildHtml
 );
 exports.start = series(exports.build, initServer);

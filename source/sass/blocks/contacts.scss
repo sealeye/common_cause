@@ -1,7 +1,35 @@
-.contacts{
-    &__haeding{}
-    &__map{}
-    &__info{}
-    &__block{}
-    &__text{}
+.contacts {
+    margin-top: -13px;
+    &__heading {
+        margin-bottom: 44px;
+    }
+
+    &__map {
+        width: 100%;
+        height: 370px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        padding-top: 41px;
+        padding-bottom: 20px;
+    }
+
+    &__block {
+        width: 33.33%;
+        text-align: left;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: $gray-dark;
+        margin: 0;
+        margin-bottom: 23px;
+    }
 }

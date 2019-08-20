@@ -1,10 +1,63 @@
 .header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 23px;
+    padding-bottom: 15px;
+    }
+
     &__logo {}
-    &__nav{}
-    &__nav-list{}
-    &__nav-item{}
-    &__nav-link{}
-    &__contact-block{}
-    &__phone{}
-    &__button{}
+
+    &__nav {
+        flex-grow: 1;
+    }
+
+    &__nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    &__nav-item {
+        width: 33.33%;
+            padding: 20px 31px;
+    }
+
+    &__nav-link {}
+
+    &__contact-block {
+        display: flex;
+        flex-direction: column;
+            align-items: flex-end;
+    }
+
+    &__phone {
+        
+    }
+
+    &__button {    margin-top: 17px;}
+}
+
+//logo svg
+.st0 {
+    fill: #FFFFFF;
+}
+
+.st1 {
+    fill: #B01116;
+}
+
+.st2 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: none;
+}
+
+.st3 {
+    font-family: $default-font;
+}
+
+.st4 {
+    font-size: 45px;
 }

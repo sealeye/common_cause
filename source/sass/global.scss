@@ -10,6 +10,7 @@ html {
 
 a {
     text-decoration: none;
+    color: $gray-light;
 }
 
 img {
@@ -24,9 +25,10 @@ body {
 
     font-family: $default-font;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 300;
     line-height: 1.2;
     color: $default-text-color;
+    text-align: center;
 
     background-color: $bg-color;
     overflow-x: hidden;
@@ -54,7 +56,7 @@ body {
     @media (min-width: $tablet-width) {}
 
     @media (min-width: $desktop-width) {
-        max-width: 1150px;
+        max-width: 1200px; 
         padding: 0 25px;
     }
 }

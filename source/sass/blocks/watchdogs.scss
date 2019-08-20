@@ -1,6 +1,22 @@
-.watchdogs{
-    &__heading{}
-    &__list{}
-    &__list-item{}
-    &__name{}
+.whatchdogs{
+    padding-top: 48px;
+    background-image: url(../img/wings.png);
+    background-size: cover;
+    &__heading{
+        margin-bottom: 54px;
+    }
+    &__list{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 58px;
+        list-style: none;
+    }
+    &__list-item{
+        margin-bottom: 22px;
+    }
+    &__name{
+        font-size: 18px;
+        color: $gray-dark;
+        margin: 0;
+    }
 }

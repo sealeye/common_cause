@@ -1,7 +1,42 @@
-.tab{
-    &__heading{}
-    &__body{}
-    &__sub-heading{}
-    &__text{}
-    &__button{}
+.tab {
+    border-bottom: 1px solid $red;
+    text-align: left;
+    position: relative;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__heading {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    &__body {
+        padding-bottom: 35px;
+        display: none;
+    }
+
+    &__sub-heading {
+        font-size: 18px;
+        font-weight: 500;
+        color: $gray-dark;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    &__button {
+        display: block;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        border: 9px solid transparent;
+        border-top: 16px solid $gray-dark;
+    }
 }

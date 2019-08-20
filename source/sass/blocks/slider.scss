@@ -1,8 +1,33 @@
 .slider {
-    &__heading{}
-    &__list{}
-    &__slide{}
-    &__text{}
+    text-align: left;
+    margin-bottom: 62px;
+    &__heading{
+
+    }
+    &__list{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 36px;
+    }
+    &__slide{
+        display: none;
+        &:first-child {
+            display: flex;
+        }
+    }
+    &__text{
+        width: 50%;
+   
+        color: $red;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0;
+            padding-top: 49px;
+    padding-left: 35px;
+        padding-bottom: 32px;
+    }
     &__image{}
     &__controls{}
 }

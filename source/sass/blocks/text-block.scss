@@ -1,3 +1,11 @@
 .text-block{
-    &__text{}
+    background-color: $bg-highlight;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    &__text{
+        font-size: 20px;
+        color: $gray-dark;
+        margin: 0;
+        margin-bottom: 25px;
+    }
 }

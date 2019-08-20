@@ -1,6 +1,32 @@
-.banner{
-    &__text{}
-    &__heading{}
-    &__button{}
-    &__desc{}
+.banner {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    &__text {
+        width: 50%;
+        text-align: left;
+        color: $red;
+        padding-top: 36px;
+        margin-bottom: 70px;
+    }
+
+    &__heading {
+        font-size: 38px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 66px;
+
+        &:first-child {
+            font-weight: 300;
+            margin-bottom: 46px;
+        }
+    }
+
+    &__button {}
+
+    &__desc {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
 }

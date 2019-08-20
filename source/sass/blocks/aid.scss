@@ -1,7 +1,39 @@
-.aid{
-    &__heading{}
-    &__text{}
-    &__list{}
-    &__item{}
-    &__card{}
+.aid {
+    margin-bottom: 72px;
+    &__heading {
+        margin-bottom: 36px;
+    }
+
+    &__text {
+        margin: 0;
+        margin-bottom: 12px;
+        font-size: 20px;
+
+        &--light {
+            font-size: 22px;
+            text-decoration: underline;
+            color: $gray-light;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 57px;
+    }
+
+    &__item {
+        width: calc(33.33% - 20px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    &__card {}
 }

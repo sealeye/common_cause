@@ -1,1 +1,29 @@
-.btn{}
+.btn {
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: $red;
+    color: $white;
+    display: inline-block;
+
+    &--big {
+        font-size: 24px;
+        padding: 14px 65px;
+        text-transform: uppercase;
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border: 1px solid $red;
+        color: $red;
+        font-size: 18px;
+            padding: 9px 58px;
+    }
+
+    &--gray {
+        background-color: transparent;
+        border: 1px solid $gray;
+        color: $gray;
+        font-size: 18px;
+        padding: 10px 79px;
+    }
+}

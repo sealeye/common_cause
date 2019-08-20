@@ -1,5 +1,57 @@
-.payment-card{
-    &__price{}
-    &__text{}
-    &__button{}
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid $gray-light;
+    height: 100%;
+    padding: 15px 15px 25px;
+    min-height: 334px;
+
+    &:hover {
+        box-shadow: 2px 0px 16px $gray;
+        border: none;
+
+        .payment-card__price span{
+            font-weight: 500;
+        }
+    }
+
+    &__price {
+        font-size: 27px;
+        margin: 0;
+        margin-bottom: auto;
+        font-weight: 300;
+
+        span {
+            display: block;
+            font-size: 50px;
+            margin-bottom: -7px;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+        margin: 0;
+        margin-bottom: 15px;
+        
+        &:first-of-type{
+            margin-top: 35px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        &-other {
+            font-size: 24px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    &__button {
+        width: auto;
+        margin-top: auto;
+        align-self: center;
+    }
 }
