@@ -1,5 +1,5 @@
 .aid {
-    margin-bottom: 72px;
+    margin-bottom: 52px;
     &__heading {
         margin-bottom: 36px;
     }
@@ -8,11 +8,17 @@
         margin: 0;
         margin-bottom: 12px;
         font-size: 20px;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
 
         &--light {
             font-size: 22px;
             text-decoration: underline;
             color: $gray-light;
+            @media (max-width: $tablet) {
+                font-size: 18px;
+            }
         }
     }
 
@@ -23,12 +29,20 @@
         margin: 0;
         padding: 0;
         margin-top: 57px;
+        @media (max-width: $tablet) {
+            justify-content: space-between;
+        }
     }
 
     &__item {
         width: calc(33.33% - 20px);
         margin-right: 30px;
         margin-bottom: 30px;
+        
+        @media (max-width: $tablet) {
+            width: calc(50% - 12px);
+            margin-right: 0;
+        }
 
         &:nth-child(3n) {
             margin-right: 0;

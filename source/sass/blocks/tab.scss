@@ -12,6 +12,9 @@
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 35px;
+        @media (max-width: $tablet) {
+            font-size: 18px;
+        }
     }
 
     &__body {
@@ -23,11 +26,17 @@
         font-size: 18px;
         font-weight: 500;
         color: $gray-dark;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
     }
 
     &__text {
         font-size: 18px;
         margin: 0;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
     }
 
     &__button {

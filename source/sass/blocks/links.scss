@@ -4,14 +4,22 @@
     padding-top: 85px;
     padding-bottom: 95px;
 
+    @media (max-width: $tablet) {
+        justify-content: space-between;
+    }
+
     &__item {
         width: 408px;
-        padding: 20px; 
+        padding: 20px;
         color: $green;
         border: 1px solid $green;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: $tablet) {
+            width: calc(50% - 12px);
+        }
     }
 
     &__icon {
@@ -26,6 +34,10 @@
 
         svg {
             fill: $green;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
         }
     }
 

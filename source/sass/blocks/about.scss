@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    @media (max-width: $tablet) {
+        flex-direction: column-reverse;
+    }
 
     &:not(.container) {
         display: block;
@@ -9,11 +12,15 @@
         .about__heading.container {
             margin-bottom: 32px;
             display: inline-block;
+            padding: 0;
         }
 
         .container {
             display: flex;
             justify-content: space-between;
+            @media (max-width: $tablet) {
+                flex-direction: column-reverse;
+            }
         }
         .about__video {
             margin-top: 22px;
@@ -25,6 +32,9 @@
 
     &__video {
         width: 48.5%;
+        @media (max-width: $tablet) {
+            width: auto;
+        }
 
         iframe {
             width: 100%;
@@ -35,6 +45,9 @@
     &__text-wrap {
         width: 48.5%;
         text-align: left;
+        @media (max-width: $tablet) {
+            width: auto;
+        }
     }
 
     &__heading {}
@@ -42,5 +55,8 @@
     &__text {
         font-size: 18px;
         color: $gray-dark;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
     }
 }

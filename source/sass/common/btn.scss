@@ -9,6 +9,10 @@
         font-size: 24px;
         padding: 14px 65px;
         text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            font-size: 18px;
+        }
     }
 
     &--transparent {
@@ -16,7 +20,7 @@
         border: 1px solid $red;
         color: $red;
         font-size: 18px;
-            padding: 9px 58px;
+        padding: 9px 58px;
     }
 
     &--gray {

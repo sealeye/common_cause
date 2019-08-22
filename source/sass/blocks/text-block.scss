@@ -7,5 +7,8 @@
         color: $gray-dark;
         margin: 0;
         margin-bottom: 25px;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
     }
 }

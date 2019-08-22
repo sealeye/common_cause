@@ -108,11 +108,11 @@ function createBuildJs() {
       'source/js/script.js',
     ])
         .pipe(sourcemap.init())
-        .pipe(concat('script.min.js'))
+       // .pipe(concat('script.min.js'))
         .pipe(babel())
-        .pipe(uglify({
-            toplevel: true
-        }))
+        //.pipe(uglify({
+        //    toplevel: true
+       // }))
         .pipe(sourcemap.write('.'))
         .pipe(dest('build/js'));
 }

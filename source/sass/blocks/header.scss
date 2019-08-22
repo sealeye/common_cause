@@ -1,15 +1,51 @@
 .header {
+
+    box-shadow: 0px 1px 7px $gray-light;
+    position: relative;
+    z-index: 10;
+
+    &--no-js {
+        .header__nav {
+            display: block;
+        }
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
         padding-top: 23px;
-    padding-bottom: 15px;
+        padding-bottom: 15px;
+
+        @media (max-width: $tablet) {
+            flex-direction: row-reverse;
+        }
     }
 
     &__logo {}
 
+    &__burger {
+        display: none;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+
+        svg {
+            fill: $gray;
+        }
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
     &__nav {
         flex-grow: 1;
+
+        &--closed {
+            @media (max-width: $tablet) {
+                display: none;
+            }
+        }
     }
 
     &__nav-list {
@@ -21,7 +57,7 @@
 
     &__nav-item {
         width: 33.33%;
-            padding: 20px 31px;
+        padding: 20px 31px;
     }
 
     &__nav-link {}
@@ -29,14 +65,18 @@
     &__contact-block {
         display: flex;
         flex-direction: column;
-            align-items: flex-end;
+        align-items: flex-end;
     }
 
-    &__phone {
-        
-    }
+    &__phone {}
 
-    &__button {    margin-top: 17px;}
+    &__button {
+        margin-top: 17px;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
 }
 
 //logo svg
@@ -59,5 +99,5 @@
 }
 
 .st4 {
-    font-size: 45px;
+    font-size: 41px;
 }

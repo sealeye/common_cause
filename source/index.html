@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header--no-js">
         <div class="container">
             <a href="" class="hedaer__logo">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 706 622" width="118" height="95">
@@ -48,9 +48,8 @@
                     <rect x="42.2" y="39" class="st2" width="638.6" height="48.3" />
                     <text transform="matrix(1 0 0 1 42.2095 71.1544)" class="st1 st3 st4">ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ</text>
                 </svg>
-
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav header__nav--closed">
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="" class="header__nav-link">Поддержи создание
                             нового фильма</a></li>
@@ -62,6 +61,18 @@
                 <a href="tel:8-800-942-50-50" class="header__phone">8-800-942-50-50</a>
                 <a href="" class="header__button btn btn--transparent">Поддержать</a>
             </div>
+            <button class="header__burger" type="button">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 231" width="45">
+                    <g>
+                        <rect width="181" x="50" y="164.5" height="33" />
+                        <rect width="181" x="50" y="99.5" height="33" />
+                        <rect width="181" x="50" y="32.5" height="33" />
+                        <rect width="33" y="165.5" height="33" />
+                        <rect width="33" y="99.5" height="33" />
+                        <rect width="33" y="32.5" height="33" />
+                    </g>
+                </svg>
+            </button>
             <h1 class="visually-hidden">
                 Общественная организация "Общее дело". Образовательные программы для детей
             </h1>
@@ -405,20 +416,24 @@
                         в офисе организации: </p>
                     <p class="contacts__text">Адрес: 109443 г. Москва Волгоградский проспект д. 135, корп. 3 </p>
                 </div>
-                <div class="contacts__block">
-                    <p class="contacts__text">Руководитель по развитию, координатор:
-                    </p>
-                    <p class="contacts__text">ДЕГТЯРЕВ АЛЕКСЕЙ АНАТОЛЬЕВИЧ</p>
-                    <p class="contacts__text">телефон: <a href="tel:8-962-950-75-61">8-962-950-75-61</a><br>
-                        e-mail: <a href="mailto:post27@bk.ru">post27@bk.ru</a></p>
-                    <p class="contacts__text">Руководитель направления по работе
-                        с молодежью
-                    </p>
-                    <p class="contacts__text">КОВАЛЕВСКИЙ ЯРОСЛАВ ВИКТОРОВИЧ</p>
-                    <p class="contacts__text">телефон:<a href="tel:8-985-435-73-18">8-985-435-73-18</a><br>
-                        e-mail: <a href="mailto:odmosk@gmail.com">odmosk@gmail.com</a></p>
+                <div class="contacts__block contacts__block--managers">
+                    <div>
+                        <p class="contacts__text">Руководитель по развитию, координатор:
+                        </p>
+                        <p class="contacts__text">ДЕГТЯРЕВ АЛЕКСЕЙ АНАТОЛЬЕВИЧ</p>
+                        <p class="contacts__text">телефон: <a href="tel:8-962-950-75-61">8-962-950-75-61</a><br>
+                            e-mail: <a href="mailto:post27@bk.ru">post27@bk.ru</a></p>
+                    </div>
+                    <div>
+                        <p class="contacts__text">Руководитель направления по работе
+                            с молодежью
+                        </p>
+                        <p class="contacts__text">КОВАЛЕВСКИЙ ЯРОСЛАВ ВИКТОРОВИЧ</p>
+                        <p class="contacts__text">телефон:<a href="tel:8-985-435-73-18">8-985-435-73-18</a><br>
+                            e-mail: <a href="mailto:odmosk@gmail.com">odmosk@gmail.com</a></p>
+                    </div>
                 </div>
-                <div class="contacts__block">
+                <div class="contacts__block contacts__block--data">
                     <p class="contacts__text">ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ
                         "ОБЩЕЕ ДЕЛО" </p>
                     <p class="contacts__text">Реквизиты:</p>
@@ -434,6 +449,7 @@
             </div>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

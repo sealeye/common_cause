@@ -1,22 +1,31 @@
-.whatchdogs{
+.whatchdogs {
     padding-top: 48px;
     background-image: url(../img/wings.png);
-    background-size: cover;
-    &__heading{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 90px;
+
+    &__heading {
         margin-bottom: 54px;
     }
-    &__list{
+
+    &__list {
         padding: 0;
         margin: 0;
         margin-bottom: 58px;
         list-style: none;
     }
-    &__list-item{
+
+    &__list-item {
         margin-bottom: 22px;
     }
-    &__name{
+
+    &__name {
         font-size: 18px;
         color: $gray-dark;
         margin: 0;
+        @media (max-width: $tablet) {
+            font-size: 15px;
+        }
     }
 }

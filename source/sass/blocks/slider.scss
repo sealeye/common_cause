@@ -1,6 +1,9 @@
 .slider {
     text-align: left;
     margin-bottom: 62px;
+    @media (max-width: $tablet) {
+        display: none;
+    }
     &__heading{
 
     }
