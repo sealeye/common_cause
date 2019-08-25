@@ -1,5 +1,8 @@
 .report {
     margin-bottom: 58px;
+    @media (max-width: $mobile) {
+        margin-bottom: 40px;
+    }
     &__heading{
         margin-bottom: 15px;
     }

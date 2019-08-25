@@ -3,6 +3,11 @@
 
     &__heading {
         margin-bottom: 44px;
+        padding: 0;
+        @media (max-width: $mobile) {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
     }
 
     &__map {
@@ -12,6 +17,9 @@
         iframe {
             width: 100%;
             height: 100%;
+        }
+        @media (max-width: $mobile) {
+            display: none;
         }
 
     }
@@ -23,6 +31,9 @@
 
         @media (max-width: $tablet) {
             flex-direction: column;
+        }
+        @media (max-width: $mobile) {
+            padding-top: 0;
         }
     }
 
@@ -44,11 +55,22 @@
                     width: calc(50% - 12px);
                 }
             }
+            @media (max-width: $mobile) {
+                flex-wrap: wrap;
+                div {
+                    width: 100%;
+                    margin-top: 16px;
+                }
+            }
         }
 
         &--data {
             @media (max-width: $tablet) {
                 text-align: center;
+            }
+            @media (max-width: $mobile) {
+                text-align: left;
+                margin-top: 16px;
             }
         }
 
@@ -62,6 +84,10 @@
 
         @media (max-width: $tablet) {
             font-size: 15px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            margin-bottom: 8px;
         }
     }
 }

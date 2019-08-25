@@ -1,7 +1,7 @@
 'use strict';
 
 var header = document.querySelector('.header');
-header.classList.remove('site-header--no-js');
+header.classList.remove('header--no-js');
 
 const toggle = header.querySelector('.header__burger');
 const nav = header.querySelector('.header__nav');
@@ -15,3 +15,13 @@ const toggleMenu = () => {
 toggleMenu();
 
 toggle.onclick = toggleMenu;
+
+var titleList = document.querySelectorAll(".tab__button");
+
+titleList.forEach(function (e, i) {
+    e.addEventListener('click', function () {
+        document.querySelector('.tab__body--' + e.dataset.number).classList.toggle('tab__body--opened');
+        e.classList.toggle('tab__button--opened');
+    });
+});
+

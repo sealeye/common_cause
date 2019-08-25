@@ -5,6 +5,9 @@
     @media (max-width: $tablet) {
         flex-direction: column-reverse;
     }
+    @media (max-width: $mobile) {
+        margin-bottom: 18px;
+    }
 
     &:not(.container) {
         display: block;
@@ -13,6 +16,9 @@
             margin-bottom: 32px;
             display: inline-block;
             padding: 0;
+            @media (max-width: $mobile) {
+                margin-bottom: 2px;
+            }
         }
 
         .container {
@@ -24,9 +30,16 @@
         }
         .about__video {
             margin-top: 22px;
+            @media (max-width: $mobile) {
+                margin-top: 0;
+            }
         }
         .about__text {
             margin-bottom: 22px;
+            @media (max-width: $mobile) {
+                text-align: left;
+                margin-bottom: 16px;
+            }
         }
     }
 
@@ -47,6 +60,7 @@
         text-align: left;
         @media (max-width: $tablet) {
             width: auto;
+            text-align: center;
         }
     }
 
@@ -57,6 +71,9 @@
         color: $gray-dark;
         @media (max-width: $tablet) {
             font-size: 15px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 14px;
         }
     }
 }

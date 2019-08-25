@@ -6,6 +6,13 @@
 
     @media (max-width: $tablet) {
         justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+        padding-top: 0;
+        padding-bottom: 14px;
     }
 
     &__item {
@@ -19,6 +26,19 @@
 
         @media (max-width: $tablet) {
             width: calc(50% - 12px);
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 11px;
+        }
+        &:hover {
+            svg {
+                fill: $gray;
+            }
+            .links__icon {
+                border-color: $gray;
+            }
         }
     }
 
@@ -44,5 +64,8 @@
     &__text {
         font-size: 18px;
         text-decoration: underline;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
     }
 }

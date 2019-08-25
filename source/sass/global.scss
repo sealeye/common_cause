@@ -11,6 +11,10 @@ html {
 a {
     text-decoration: none;
     color: $gray-light;
+
+    &:hover {
+        color: $gray;
+    }
 }
 
 img {
@@ -54,8 +58,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 
+    @media (max-width: $mobile) {
+        padding: 0 13px;
+    }
+
     @media (min-width: $tablet) {
-        max-width: 1200px; 
+        max-width: 1200px;
         padding: 0 25px;
     }
 }
