@@ -16,6 +16,7 @@
     }
     &__slide{
         display: none;
+        height: 100%;
         &:first-child {
             display: flex;
         }

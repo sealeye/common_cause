@@ -25,3 +25,21 @@ titleList.forEach(function (e, i) {
     });
 });
 
+$('.owl-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    smartSpeed: 500
+})
+
+//смягчение скролла
+$('.header__button').click(function (e) {
+    e.preventDefault;
+    $('html, body').animate({
+        scrollTop: $("#payment").offset().top - 50 + 'px'
+    }, 1000);
+});

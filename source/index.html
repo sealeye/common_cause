@@ -59,7 +59,7 @@
             </nav>
             <div class="header__contact-block">
                 <a href="tel:8-800-942-50-50" class="header__phone">8-800-942-50-50</a>
-                <a href="" class="header__button btn btn--transparent">Поддержать</a>
+                <a href="#payment" class="header__button btn btn--transparent">Поддержать</a>
             </div>
             <button class="header__burger" type="button">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 231" width="45">
@@ -112,14 +112,14 @@
         </section>
         <section class="slider container">
             <h2 class="slider__heading heading">Что мы делаем</h2>
-            <ul class="slider__list">
-                <li class="slider__slide" style="background-image: url(../img/slide-1.jpg)">
+            <ul class="slider__list owl-carousel">
+                <li class="slider__slide item" style="background-image: url(../img/slide-1.jpg)">
                     <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, distinctio, tempore. Nemo dolorum quidem, debitis, sequi quod aut id reiciendis illo voluptates consectetur minima consequuntur officiis maiores sint magni. Consectetur!id reiciendis illo voluptates consectetur minima consequuntur officiis maiores sint magni. Consectetur Consectetur!</p>
                 </li>
-                <li class="slider__slide" style="background-image: url(../img/slide-2.jpg)">
+                <li class="slider__slide item" style="background-image: url(../img/slide-2.jpg)">
                     <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, distinctio, tempore. Nemo dolorum quidem, debitis, sequi quod aut id reiciendis illo voluptates consectetur minima consequuntur officiis maiores sint magni. Consectetur!</p>
                 </li>
-                <li class="slider__slide" style="background-image: url(../img/slide-3.jpg)">
+                <li class="slider__slide item" style="background-image: url(../img/slide-3.jpg)">
                     <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, distinctio, tempore. Nemo dolorum quidem, debitis, sequi quod aut id reiciendis illo voluptates consectetur minima consequuntur officiis maiores sint magni. Consectetur!</p>
                 </li>
             </ul>
@@ -332,7 +332,7 @@
             <article class="report__tab tab">
                 <h3 class="tab__heading">Образовательные фильмы</h3>
                 <div class="tab__body tab__body--2">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1GxqAJCv4mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1GxqAJCv4mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <button class="tab__button" type="button" aria-label="Раскрыть блок" data-number="2"></button>
             </article>
@@ -379,8 +379,8 @@
                     <p class="whatchdogs__name">Строчкова Е.В. - 1000 р.<span class="whatchdogs__paying"></span></p>
                 </li>
             </ul>
-            <a href="" class="whatchdogs__button btn btn--gray">Все хранители</a>
-            <article class="whatchdogs__payment payment">
+            <a href="#" class="whatchdogs__button btn btn--gray">Все хранители</a>
+            <article class="whatchdogs__payment payment" id="payment">
                 <h3 class="payment__heading">Стать хранителем</h3>
                 <div class="payment__body"></div>
             </article>
@@ -449,6 +449,9 @@
             </div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/polyfill.js"></script>
     <script src="js/script.js"></script>
 </body>
 

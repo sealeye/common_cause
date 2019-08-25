@@ -6,6 +6,11 @@
     display: inline-block;
     transition: all 0.2s ease-in;
 
+    &:hover {
+        background-color: $red-light;
+        color: $white;
+    }
+
     &--big {
         font-size: 24px;
         padding: 14px 65px;
@@ -20,10 +25,6 @@
             width: 100%;
             text-align: center;
         }
-
-        &:hover {
-            background-color: $red-light;
-        }
     }
 
     &--transparent {
@@ -36,6 +37,7 @@
         &:hover {
             border-color: $red-light;
             color: $red-light;
+            background-color: transparent;
         }
     }
 
@@ -55,6 +57,7 @@
         &:hover {
             border-color: $gray-dark;
             color: $gray-dark;
+                background-color: transparent;
         }
     }
 }
