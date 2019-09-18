@@ -6,6 +6,7 @@
     height: 100%;
     padding: 15px 15px 25px;
     min-height: 334px;
+    color: $gray-dark;
 
     @media (max-width: $tablet) {
         min-height: 0;
@@ -16,6 +17,7 @@
     &:hover {
         box-shadow: 2px 0px 16px $gray;
         border: none;
+        color: $gray-dark;
 
         .payment-card__price span {
             font-weight: 500;
@@ -53,6 +55,7 @@
         @media (max-width: $tablet) {
             font-size: 18px;
         }
+
         @media (max-width: $mobile) {
             font-size: 16px;
         }
@@ -94,6 +97,8 @@
         width: auto;
         margin-top: auto;
         align-self: center;
+        appearance: none;
+        border: none;
 
         @media (max-width: $tablet) {
             display: none;

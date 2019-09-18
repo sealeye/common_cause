@@ -1,0 +1,312 @@
+div[id*="leyka-pf-"].leyka-pf-star {
+    max-width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 32px 45px 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item.selected,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item.selected,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.selected,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.selected,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item.selected,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item.selected,
+.leyka-tpl-star-form .section .section__fields.donor .donor__textfield.focus .leyka-star-field-frame,
+.leyka-screen-form .section .section__fields.donor .donor__textfield.focus .leyka-star-field-frame,
+.leyka-tpl-star-form .section .section__fields .donor__oferta input:checked + label:before,
+.leyka-screen-form .section .section__fields .donor__oferta input:checked + label:before,
+.leyka-tpl-star-form .section .section__fields.donor .donor__textfield.valid .leyka-star-field-frame,
+.leyka-screen-form .section .section__fields.donor .donor__textfield.valid .leyka-star-field-frame {
+    border-color: $red !important;
+    background-color: transparent !important;
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item {
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item {
+    border-radius: 0;
+    width: 138px;
+    flex-grow: 0;
+    margin-bottom: 25px;
+
+    @media (max-width: $mobile) {
+        width: calc(50% - 10px);
+        height: 40px;
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-list {
+    max-width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    justify-content: flex-start;
+
+    @media (max-width: $mobile) {
+        justify-content: space-between;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-arrow,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-arrow {
+    display: none !important;
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper {
+    height: auto;
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .donor__submit input:disabled,
+.leyka-screen-form .section .section__fields .donor__submit input:disabled {
+    opacity: 0.5;
+    background-color: $red;
+    margin-bottom: 30px;
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .donor__submit input,
+.leyka-screen-form .section .section__fields .donor__submit input {
+    background-color: $red;
+    margin-bottom: 30px;
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields.payments-grid .star-swiper .swiper-item.payment-opt,
+.leyka-screen-form .section .section__fields.payments-grid .star-swiper .swiper-item.payment-opt {
+    width: calc(50% - 40px);
+    margin-right: 20px;
+    flex-grow: 1;
+    margin-right: 16px !important;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        margin-right: 0 !important;
+        height: 60px;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields.donor .donor__textfield .leyka-star-field-frame,
+.leyka-screen-form .section .section__fields.donor .donor__textfield .leyka-star-field-frame {
+    border-radius: 0;
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--leyka-color-gray-superlight);
+
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    margin-right: 16px;
+
+    span {
+        color: $gray-dark;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper,
+.leyka-screen-form .section .section__fields .star-swiper {
+    border-right: 0;
+    border: none;
+}
+
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item {
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+
+    display: flex;
+    padding-bottom: 8px;
+
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item span,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item input,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item span,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item input {
+    @media (max-width: $mobile) {
+        font-size: 16px;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item span,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item input,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item span,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item input,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item.selected span,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item.selected input,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item.selected span,
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item.selected input {
+    font-size: 24px;
+    color: $gray !important;
+    font-family: $default-font;
+    font-weight: 300;
+}
+
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-list {
+    justify-content: space-between;
+}
+
+.leyka-screen-form .section .section__fields .star-swiper .swiper-item,
+.leyka-tpl-star-form .section .section__fields .star-swiper .swiper-item,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item {
+    width: 177px;
+    margin-right: 0;
+    font-weight: 300;
+    font-family: $default-font;
+    height: 64px;
+    margin-bottom: 30px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label span.textfield-label,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label span.textfield-label,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item input,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item input,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.selected label .textfield-label,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.selected label .textfield-label,
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.focus label span.textfield-label,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item.focus label span.textfield-label {
+    font-size: 18px;
+    font-family: $default-font;
+    font-weight: 300;
+    height: auto;
+}
+
+.leyka-tpl-star-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label span.textfield-label span.currency,
+.leyka-screen-form .section .section__fields .amount__figure.star-swiper .swiper-item.flex-amount-item label span.textfield-label span.currency {
+    display: none;
+}
+
+.leyka-js .leyka-pf--active .leyka-pf__overlay {
+    display: none !important;
+}
+
+div[id*="leyka-pf-"] form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section--periodicity {
+    order: 5;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 0;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields.periodicity,
+.leyka-screen-form .section .section__fields.periodicity {
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields.periodicity,
+.leyka-screen-form .section .section__fields.periodicity {
+    justify-content: space-between;
+}
+
+.leyka-tpl-star-form .section .section__fields.periodicity a {
+    border-radius: 0;
+    width: calc(50% - 20px);
+    border: 2px solid $red;
+    color: $red;
+    margin-right: 0;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.leyka-tpl-star-form .section .section__fields.periodicity a.active {
+    background-color: $red;
+    color: white;
+    border-color: $red;
+    margin-right: 0;
+}
+
+
+//whatchdogs
+
+div[id*="leyka_donors_list"],
+div[id*="leyka_donors_list"] .ldl-item:nth-of-type(odd),
+div[id*="leyka_donors_list"] .ldl-item:nth-of-type(odd) {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+div[id*="leyka_donors_list"].wide .ldl-item {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    justify-content: center;
+}
+
+div[id*="leyka_donors_list"].wide .ldl-item .purpose {
+    display: none;
+}
+
+div[id*="leyka_donors_list"].wide .ldl-item .amount,
+div[id*="leyka_donors_list"] .ldl-item .meta {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    font-weight: 300;
+    font-family: $default-font;
+    font-size: 18px;
+    color: $gray-dark;
+
+    @media (max-width: $tablet) {
+        font-size: 15px;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 14px;
+    }
+}
+
+div[id*="leyka_donors_list"].wide .ldl-item .purpose,
+div[id*="leyka_donors_list"].wide .ldl-item .meta,
+div[id*="leyka_donors_list"].wide .ldl-item .donor-comment {
+    margin-left: 0;
+}
+
+div[id*="leyka_donors_list"].wide .ldl-item .meta {
+    &:after {
+        content: ' —';
+        margin-right: 5px;
+    }
+}

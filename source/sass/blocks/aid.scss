@@ -59,6 +59,9 @@
         @media (max-width: $tablet) {
             width: calc(50% - 12px);
             margin-right: 0;
+            &:nth-child(2) {
+                order: -1;
+            }
         }
         @media (max-width: $mobile) {
             width: 100%;

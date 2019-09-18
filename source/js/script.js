@@ -16,7 +16,7 @@ toggleMenu();
 
 toggle.onclick = toggleMenu;
 
-var titleList = document.querySelectorAll(".tab__button");
+var titleList = document.querySelectorAll('.tab__button');
 
 titleList.forEach(function (e, i) {
     e.addEventListener('click', function () {
@@ -36,10 +36,15 @@ $('.owl-carousel').owlCarousel({
     smartSpeed: 500
 })
 
-//смягчение скролла
-$('.header__button').click(function (e) {
-    e.preventDefault;
-    $('html, body').animate({
-        scrollTop: $("#payment").offset().top - 50 + 'px'
-    }, 1000);
+$(document).ready(function () {
+    $('a').click(function () {
+        var elementClick = $(this).attr('href');
+        var destination = $(elementClick).offset().top - 50;
+
+        $('html').animate({
+            scrollTop: destination
+        }, 1100);
+
+        return false;
+    });
 });
